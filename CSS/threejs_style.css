@@ -1,0 +1,31 @@
+.woodstock-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Texte à gauche */
+.woodstock-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Viewer 3D à droite */
+.threejs-glb {
+  flex: 1; /* prend l’espace restant */
+  max-width: 50%; /* moitié de la bulle */
+  aspect-ratio: 1 / 1; /* garde le viewer carré */
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #f7f7f7, #e0e0e0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: auto; /* pousse le viewer à droite */
+}
+
+/* Canvas WebGL interne */
+.threejs-glb canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
