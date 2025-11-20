@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Responsive</title>
+
+  <!-- chemins mis à jour vers le dossier CSS -->
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/section_style.css" />
+  <link rel="stylesheet" href="CSS/threejs_style.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+<header class="head">
+  <div class="head-left">
+    <h1>Gauthier Grimmer</h1>
+    <p>PhD Student (University of Strasnbourg) - 1st year</p>
+  </div>
+  <div class="head-right">
+    <a href="https://github.com/g-grimmer" target="_blank" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
+    </a>
+    <a href="https://www.researchgate.net/profile/Gauthier-Grimmer/research" target="_blank" aria-label="ResearchGate">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate" />
+    </a>
+    <a href="https://www.linkedin.com/in/gauthier-grimmer-3a5599364/" target="_blank" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+  </div>
+</header>
+
+<div class="container">
+  <nav class="nav">
+     <button onclick="afficherSection('sec_biography')">Biography</button>
+     <button onclick="afficherSection('sec_research')">Research</button>
+     <button onclick="afficherSection('sec_teaching')">Teaching</button>
+     <button onclick="afficherSection('sec_activities')">Activities</button>
+     <button onclick="afficherSection('sec_events')">Events</button>
+     <button onclick="afficherSection('sec_publication')">Publications</button>
+  </nav>
+
+  <main class="content" id="content"></main>
+</div>
+
+<!-- Module three.js + gestionnaire des viewers GLB -->
+<script type="module" src="JS/multi_glb_viewers.js"></script>
+
+<!-- Script principal du site -->
+<script src="JS/script.js"></script>
+
+</body>
+</html>
